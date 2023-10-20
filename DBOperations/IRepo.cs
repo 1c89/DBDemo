@@ -8,13 +8,13 @@ namespace DBOperations
 {
     internal interface IRepo
     {
-        void Add(string fn, string ln, string email);
-        void Update(int id, string fn, string ln, string email);
+        void Add(Person p);
+        void Update(int id, Person P);
         void Delete(int id);
         void DeleteAll();
 
-        IEnumerable<string> GetAll();
-        string GetAll(int id);
+        IEnumerable<Person> GetAll();
+        Person Get(int id);
 
     }
 }
